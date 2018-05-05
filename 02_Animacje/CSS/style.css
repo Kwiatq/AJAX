@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#anim {
+    position: absolute;
+    left: 200px;
+    top: 0;
+    width: 100px;
+    height: 100px;
+    background-color: darkorange;
+}
+
+#anim.new_background {
+    background-color: blue;
+}
