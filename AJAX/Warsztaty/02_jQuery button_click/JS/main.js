@@ -1,29 +1,24 @@
 'use strict';
-
+//$(function(){
 var btn = $('#get');
 var output = $('#output');
+var data = "";
 
 
-function pobierzDane(data){
-    
-    $.getJSON(
+
+ $('button').click(function (data){
+     
+     $.getJSON(
  "http://echo.jsontest.com/userId/108/userName/Akademia108/userURL/akademia108.pl",
-                )}
+                
+    function (data){
+        console.log(data);
+        output.innerHTML = data.userID + " " + data.userName + " " + data.userURL;
+    });
     
-$.ajax (
-       {
-           url:"http://echo.jsontest.com/userId/108/userName/Akademia108/userURL/akademia108.pl",
-           
-           dataType:'json',
-           success: function(resultJSON){
-               console.log(resultJSON);
-               
-           },
-           onerror: function (msg){
-           console.log(msg);
-           }
-       });
-        
-$('button').click(function(pobierzDane){
+     console.log(data);
      
 });
+   
+    
+//});
