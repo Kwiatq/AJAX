@@ -1,8 +1,8 @@
 'use strict';
-//$(function(){
+$(function(){
 var btn = $('#get');
 var output = $('#output');
-var data = "";
+var txt = "";
 
 
 
@@ -13,12 +13,7 @@ var data = "";
                 
     function (data){
         console.log(data);
-        output.innerHTML = data.userID + " " + data.userName + " " + data.userURL;
-    });
-    
-     console.log(data);
-     
+        output.innerHTML = data;
+        });
+     });
 });
-   
-    
-//});
