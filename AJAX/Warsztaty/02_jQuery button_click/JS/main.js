@@ -2,9 +2,6 @@
 $(function(){
 var btn = $('#get');
 var output = $('#output');
-var txt = "";
-
-
 
  $('button').click(function (data){
      
@@ -13,7 +10,8 @@ var txt = "";
                 
     function (data){
         console.log(data);
-        output.innerHTML = data;
+        output.empty().append("User ID: " + data.userId + "<br>User Name: "+ data.userName + "<br>User URL: "+ data.userURL);
+        //output.empty().append(data.userId + " " + data.userName + " " + //data.userURL);
         });
      });
 });
